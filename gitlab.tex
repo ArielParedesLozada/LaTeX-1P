@@ -1,6 +1,7 @@
 \documentclass[runningheads]{llncs}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{tabularx}
 
 \begin{document}
 \title{GitLab}
@@ -116,7 +117,7 @@ Todos los artículos encontrados caen dentro de estos criterios de selección.
 %\subsection{Adquisición de datos significativos}
 %Resumen breve de las obras, características importantes
 \section{Resultados}
-\subsection{GitLab: Concepto y características}
+\subsection{RQ1: ¿Qué es GitLab?}
 %Eso po
 GitLab es una herramienta web para DevOps \cite{gitlab2022gitlab}. Es una plataforma web que, además de ofrecer
 servicios de gestión de repositorios, provee servicios de integración y entrega continua (CI/CD) \cite{fairbanks2023analyzing}.
@@ -127,7 +128,8 @@ herramientas como wikis de proyecto y seguimiento de problemas, lo que facilita 
 en gran medida \cite{safari2020structural}. Además, GitLab tiene un enfoque en la privacidad y el control del código, ya que
 permite a las organizaciones autoalojar sus recursos y no depender de servidores externos. También se debe tomar en cuenta que
 GitLab permite la colaboración no sólo entre desarrolladores, sino también con otros roles, como diseñadores y
-gerentes de proyecto \cite{choudhury2020gitlab}. Esto permite una \\
+gerentes de proyecto \cite{choudhury2020gitlab}. Esto permite una mejor colaboración entre las partes relacionadas al
+desarrollo de un proyecto.\\
 Otra de las características fundamentales de GitLab es que es un proyecto de código abierto, lo que permite a los usuarios
 modificar el código fuente de la plataforma. Esto ofrece una gran flexibilidad a la hora de personalizarlo, lo que contrasta
 con plataformas similares, que son propiedad de una empresa, como es el caso de GitHub \cite{safari2020structural}. También es
@@ -135,23 +137,36 @@ necesario tener en cuenta que GitLab, aunque se pensó inicialmente como una pla
 puede ser usada para otra gran cantidad de proyectos. El modelo de trabajo de GitLab, enfocado en la colaboración remota y asincrónica,
 la transparencia y la gestión de procesos, permite que muchas otras empresas puedan usar GitLab para implementar modelos de
 trabajo remoto \cite{choudhury2020gitlab}.\\
-Algunas de las principales características de GitLab se resumen en la siguiente tabla:
-\begin{table}
-        \centering
-        \begin{tabular}{l l l l l}
-                Curva de aprendizaje & Tipo de licencia & Empresa propietaria & Año de creación & Lenguaje usado & Ejemplos de uso \\
-                \hline
-                \hline
-                Waza
-        \end{tabular}
-        \caption{Características de GitLab}
-        \label{table:2}
-\end{table}
+GitLab tiene las siguientes características más relevantes:
+\begin{enumerate}
+        \item \textit{Año de creación}: 2011
+        \item \textit{Licencia}: MIT para la versión gratis, licencia propietaria para la pagada
+        \item \textit{Empresa propietaria}: GitLab Inc.
+        \item \textit{Lenguaje de implementación}: Ruby, con Ruby on Rails
+\end{enumerate}
+Existe una gran cantidad de proyectos que usan GitLab, pertenecientes no sólo a empresas propietarias
+sino que también lo usan proyectos independintes que integren a programadores de distintas zonas
+geográficas \cite{safari2020structural}. Desde hace algún tiempo, varios equipos han comenzado a usar GitLab
+gracias a sus capacidades en la integración y entrega continua.\\
+Sin embargo, GitLab también tiene limitaciones en comparación a plataformas más especializadas, como lo es GitHub
+Por ejemplo, GitLab tienen menos capacidad a la hora de visualiazr el código, en contraste con GitHub, por ejemplo.
+Además, algunas de la comunidad de GitLab es mucho menor que la de otras plataformas, lo que puede dificultar su uso.
 \subsection{Funciones de GitLab}
 %Funciones de GitLab
 \subsection{Historia de GitLab}
 %Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
+\begin{table}
+        \centering
+        \begin{tabularx}{1.1\textwidth}{X || X | X | X | X | X | X}
+            Herramienta & Curva de aprendizaje & Tipo de licencia & Empresa propietaria & Año de creación & Lenguaje usado & Ejemplos de uso \\
+            \hline
+            \hline
+            GitLab & Media & MIT License & GitLab Inc. & 2011 & Ruby (framework Ruby on Rails), Javascript, Go & Varios proyectos de múltiples campos
+        \end{tabularx}
+        \caption{Características de GitLab}
+        \label{table:2}
+\end{table}
 \subsection{Ventajas y desventajas}
 %Ventajas y deventajas de GitLab
 %Tabla de comparación con otros sistemas similares
