@@ -179,23 +179,47 @@ Esto hace referencia a la práctica de integrar y probar el código constantemen
 de bugs y errores en etapas tempranas. Esto se hace mediante un proceso automatizado de pruebas y construcción de artefactos
 cada vez que se realiza un commit a las ramas de desarrollo \cite{alvin2023devops,uddin2023comparative}. Esto se logra
 mediante un script especializado, que se ejecuta al momento de enviar cambios al repositorio remoto.\\
-En el caso de GitLab, este script se lo guarda en el archivo \textsf{.gitlab-ci.yml}. Para las pruebas, se usa el software
+En el caso de GitLab, este script se lo guarda en el archivo \texttt{.gitlab-ci.yml}. Para las pruebas, se usa el software
 de GitLab Runner, el cual se puede personalizar según las necesidades de los desarrolladores.
 \subsubsection{Entrega continua}
-Es una función referente a ñla 
+Es una función referente a la práctica de mantener el código en un estado que esté siempre listo para ser desplegado
+en producción \cite{fairbanks2023analyzing}. Lo que se busca es que la aplicación esté lista para llevarse a su entorno
+de despliegue.\\
+Existen al menos tres entornos de despliegue: de \textit{desarrollo}, de \textit{pruebas} y de \textit{producción}.
+Estos entornos se pueden gestionar mediante ramas en el desarrollo y con contenedores, que empaquetan las aplicaciones
+y sus dependencias \cite{fairbanks2023analyzing}. De forma más detallada, se utilizan tres ramas para
+gestionar los entornos.
+\begin{table}
+        \centering
+        \caption{Ramas y entornos de desarrollo}
+        \label{table:2}
+        \begin{tabularx}{0.9\textwidth}{X | X | X | X}
+                \textbf{Entorno de despliegue} & \textbf{Rama de trabajo}
+                & \textbf{Rama de origen} & \textbf{Responsable de gestión}\\
+                \hline
+                Desarrollo & master/main & - & - \\
+                Pruebas & testing & master/main & Asesor de calidad \\
+                Producción & production & testing & Administrador del sistema\\
+                \hline
+        \end{tabularx}
+\end{table}
+Se sigue un flujo de trabajo particular, en el cual cada rama se origina tras hacer un \textit{merge request}
+de su rama padre con su rama correspondiente \cite{alvin2023devops}. Se pueden usar tecnologías como Docker 
+o máquinas virtuales para implementar los contenedores y guardar el entorno de despliegue de las aplicaciones.
 \subsection{Historia de GitLab}
 %Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
 \begin{table}
         \centering
+        \caption{Características de GitLab}
         \begin{tabularx}{1.1\textwidth}{X || X | X | X | X | X | X}
             Herramienta & Curva de aprendizaje & Tipo de licencia & Empresa propietaria & Año de creación & Lenguaje usado & Ejemplos de uso \\
             \hline
             \hline
-            GitLab & Media & MIT License & GitLab Inc. & 2011 & Ruby (framework Ruby on Rails), Javascript, Go & Varios proyectos de múltiples campos
+            GitLab & Media & MIT License & GitLab Inc. & 2011 & Ruby (framework Ruby on Rails), Javascript, Go & Varios proyectos de múltiples campos\\
+            \hline
         \end{tabularx}
-        \caption{Características de GitLab}
-        \label{table:2}
+        \label{table:3}
 \end{table}
 \subsection{Ventajas y desventajas}
 %Ventajas y deventajas de GitLab
