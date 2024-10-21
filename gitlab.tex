@@ -57,12 +57,12 @@ de analizar su uso en el desarrollo de software. En total, se investigaron cinco
 Entre estas fuentes se encuentran: Google Scholar y la página web Academia.\\
 Los criterios de búsqueda que se usaron para los artículos fueron:
 \begin{itemize}
-        \item Tener los términos clave "GitLab", "development", "characteristics" o "DevOps"
+        \item Tener los términos clave "GitLab" y "development", "characteristics" o "DevOps"
         \item Estar publicado desde el 2020 hasta la actualidad
         \item Estar publicado por una institución oficial
         \item De preferencia, que sea una investigación publicada en inglés
 \end{itemize}
-Se obtuvieron cinco artículos bajo este enfoque. Con el fin de extraer la mayor cantidad de datos de
+Se obtuvieron ocho artículos bajo este enfoque. Con el fin de extraer la mayor cantidad de datos de
 esta investigación, se siguen la metodología de Revisión Sitemática de la Literatura, con un enfoque
 cualitativo.
 \subsection{Preguntas de investigación}
@@ -85,7 +85,7 @@ Se buscan responder cuatro interrogantes con la investigación:
 \subsection{Exploración de documentos}
 %Se hizo una búsqueda en tal y tal sitios web.
 %Se sacaron los artículostal y cual de Google Scholar, los demás de este otro sitio
-Se hizo una búsqueda en los sitios web de Google Scholar, Academia, IEEE Xplore e incluso PubMed Central.
+Se hizo una búsqueda en los sitios web de Google Scholar, Academia, IEEE Xplore, Research Gate e incluso PubMed Central.
 Se encontraron los siguientes artículos.
 %PD: Pon más artículos si encuentras
 \begin{table}[ht!]
@@ -93,9 +93,11 @@ Se encontraron los siguientes artículos.
         \begin{tabular}{l | c | l}
                 Base de Datos & Número de artículos consultados & URL \\
                 \hline
+                \hline
                 IEEE Xplorer & 3 & https://ieeexplore.ieee.org/ \\
+                Research Gate & 3 & https://www.researchgate.net/ \\
                 PubMed & 1 & https://pubmed.ncbi.nlm.nih.gov/ \\
-                Google Scholar & 1 & https://scholar.google.com/
+                Google Scholar & 1 & https://scholar.google.com/ 
         \end{tabular}
         \caption{Bases de datos consultadas}
         \label{table:1}
@@ -145,14 +147,42 @@ GitLab tiene las siguientes características más relevantes:
         \item \textit{Lenguaje de implementación}: Ruby, con Ruby on Rails
 \end{enumerate}
 Existe una gran cantidad de proyectos que usan GitLab, pertenecientes no sólo a empresas propietarias
-sino que también lo usan proyectos independintes que integren a programadores de distintas zonas
+sino que también lo usan proyectos independientes que integren a programadores de distintas zonas
 geográficas \cite{safari2020structural}. Desde hace algún tiempo, varios equipos han comenzado a usar GitLab
 gracias a sus capacidades en la integración y entrega continua.\\
 Sin embargo, GitLab también tiene limitaciones en comparación a plataformas más especializadas, como lo es GitHub
 Por ejemplo, GitLab tienen menos capacidad a la hora de visualiazr el código, en contraste con GitHub, por ejemplo.
 Además, algunas de la comunidad de GitLab es mucho menor que la de otras plataformas, lo que puede dificultar su uso.
+Otra característica importante de GitLab es que maneja un flujo de trabajo particular, con estándares propios referentes
+a los nombres de la ramas y a cómo se deben unir entre sí \cite{devineni1version}. Este modelo de ramificación, llamado
+GitLab Flow, está basado en GitHub flow, y describe 
+%TODO: PON EL GITLAB Flow (REF-GITLAB)
 \subsection{Funciones de GitLab}
 %Funciones de GitLab
+GitLab ofrece muchas funciones que facilitan el desarrollo de software y la colaboración entre equipos. Esto lo
+logra mediante varias funciones, enfocadas en la integración y entrega continua, la colaboración entre desarrolladores,
+el análisis de desempeño, entre otras, relacionadas a la filosofía de DevOps \cite{fairbanks2023analyzing}.\\
+Entre las funciones más importantes que ofrece GitLab se encuentran:
+\subsubsection{Control de versiones}
+GitLab utiliza a Git como sistema de control de versiones \cite{choudhury2020gitlab}. Esto significa que usa un
+manejo de versones basado en commits, ramas y todas los servicios que Git tiene. Esto también significa que GitLab
+se basa en sistema de control de versiones distribuido, en el cual distintos miembros del equipo pueden trabajar
+de forma independiente y luego unir sus cambios \cite{alvin2023devops}.
+\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Distributed.png}
+        \caption{Sistema distribuido}
+        \label{fig:sys-dis}
+\end{figure}
+\subsubsection{Integración continua}
+Esto hace referencia a la práctica de integrar y probar el código constantemente con el fin de evitar el surgiemiento
+de bugs y errores en etapas tempranas. Esto se hace mediante un proceso automatizado de pruebas y construcción de artefactos
+cada vez que se realiza un commit a las ramas de desarrollo \cite{alvin2023devops,uddin2023comparative}. Esto se logra
+mediante un script especializado, que se ejecuta al momento de enviar cambios al repositorio remoto.\\
+En el caso de GitLab, este script se lo guarda en el archivo \textsf{.gitlab-ci.yml}. Para las pruebas, se usa el software
+de GitLab Runner, el cual se puede personalizar según las necesidades de los desarrolladores.
+\subsubsection{Entrega continua}
+Es una función referente a ñla 
 \subsection{Historia de GitLab}
 %Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
