@@ -1,7 +1,8 @@
 \documentclass[runningheads]{llncs}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
-\usepackage{tabularx}
+\usepackage{tabularx, booktabs}
+\renewcommand{\arraystretch}{1.5}
 
 \begin{document}
 \title{GitLab}
@@ -281,20 +282,33 @@ GitLab posee varias características nativas personalizables, y ofrece una API r
 Además, es posible personalizar a GitLab mediante la modificación del código fuente, al menos en su versión CE. Esto es posible ya que GitLab
 es de código abierto, por lo que se pueden agregar funcionalidades y personalizar las existentes según las necesidades \cite{safari2020structural}.
 \subsection{Historia de GitLab}
-%Historia de GitLab
+%TODO: Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
 \begin{table}
         \centering
-        \caption{Características de GitLab}
+        \caption{Comparación de GitLab}
         \begin{tabularx}{1.1\textwidth}{X || X | X | X | X | X | X}
             Herramienta & Curva de aprendizaje & Tipo de licencia & Empresa propietaria & Año de creación & Lenguaje usado & Ejemplos de uso \\
             \hline
             \hline
-            GitLab & Media & MIT License & GitLab Inc. & 2011 & Ruby (framework Ruby on Rails), Javascript, Go & Varios proyectos de múltiples campos\\
+            GitLab & Moderada, más fácil si se sabe usar Git & MIT License & GitLab Inc. & 2011 & Ruby (framework Ruby on Rails), Javascript, Go & Varios proyectos de múltiples campos\\
+            GitHub & Moderada, más fácil si se sabe usar Git & Licencia propietaria & Microsoft & 2008 & Ruby (framework Ruby on Rails) & La inmensa mayoría de proyectos de software\\
+            BitBucket & Moderada & Licencia propietaria & Atlassian & 2008 & Python & Atlassian Jira, Puppet, OpenShift\\
+            AWS CodeCommit & Moderada & Servicio de pago basado en uso & Amazon Web Services (AWS) & 2015 & Java, Python, entre otros & ECS, proyectos empresariales y de código abierto\\
+            Azure DevOps & Moderada a alta & Licencia propietaria & Microsoft & 2018 & TypeScript & Microsoft Teams, Visual Studio Code, .NET Core\\
+            Source Froge & Moderada a alta & Licencias de código abierto (GNU, GPL, MIT, etc.) & Slashdot Media Inc. & 1999 & PHP, Perl & FileZila, Audacity, Apache HTTP Server\\
             \hline
         \end{tabularx}
         \label{table:3}
 \end{table}
+Sin embargo, y a pesar de las distintas plataformas de alojamiento de repositorios, la plataforma más popular, por un muy amplio
+márgen es GitHub \cite{uddin2023comparative}.
+\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Comp-rep.png}
+        \caption{Comparación entre plataformas}
+        \label{fig:comp-rep}
+\end{figure}
 \subsection{Ventajas y desventajas}
 %Ventajas y deventajas de GitLab
 %%Una de las desventajas es que aumenta el número de problemas
