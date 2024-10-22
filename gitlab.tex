@@ -38,6 +38,12 @@ desarrolladores, a las pruebas continuas en el código y a la integración con l
 Con el fin de resolver estos problemas, se han propuesto el uso de herramientas que faciliten la colaboración
 y monitoreo dentro del desarrollo de software. Este conjunto de herramientas y prácticas que buscan facilitar
 y automatizar los procesos de desarrollo de software se denominan DevOps \cite{gitlab2022gitlab}.\\
+\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\textwidth]{Dev-Ops.png}
+        \caption{Proceso DevOps}
+        \label{fig:devops}
+\end{figure}
 Una de las herramientas de DevOps más conocidas es GitLab, que permite automatizar el ciclo de desarrollo,
 desde la planificación y creación hasta las pruebas y el monitoreo de aplicaciones. GitLab es una plataforma
 de gestión de repositorios que permite la colaboración entre desarrolladores, así como la automatización de
@@ -136,7 +142,7 @@ desarrollo de un proyecto.\\
 Otra de las características fundamentales de GitLab es que es un proyecto de código abierto, lo que permite a los usuarios
 modificar el código fuente de la plataforma. Esto ofrece una gran flexibilidad a la hora de personalizarlo, lo que contrasta
 con plataformas similares, que son propiedad de una empresa, como es el caso de GitHub \cite{safari2020structural}. También es
-necesario tener en cuenta que GitLab, aunque se pensó inicialmente como una plataforma enfocada a la gestion y manejo del software,
+necesario tener en cuenta que GitLab, aunque se pensó inicialmente como una plataforma enfocada a la gestión y manejo del software,
 puede ser usada para otra gran cantidad de proyectos. El modelo de trabajo de GitLab, enfocado en la colaboración remota y asincrónica,
 la transparencia y la gestión de procesos, permite que muchas otras empresas puedan usar GitLab para implementar modelos de
 trabajo remoto \cite{choudhury2020gitlab}.\\
@@ -178,9 +184,9 @@ de forma independiente y luego unir sus cambios \cite{alvin2023devops}.
 \subsubsection{Alojamiento de código}
 Al igual que plataformas como GitHub, GitLab puede alojar código en sus servidores. Sin embargo, en GitHub, el código se almacena
 en los servidores de la empresa propietaria. Con GitLab, se pueden usar los servidores de la empresa misma, lo que aumenta la
-privacidad. Además, al tener control total sobre los servidores, se pueden gestionar los proyectos con mucha más libertad y de manera
+privacidad. Además, al tener control total sobre los servidores, se pueden gestiónar los proyectos con mucha más libertad y de manera
 más personalizada \cite{safari2020structural}.\\
-También se pueden gestionar aspectos de seguridad, ya que se pueden implementar políticas propias de seguridad más estrictas. Este es
+También se pueden gestiónar aspectos de seguridad, ya que se pueden implementar políticas propias de seguridad más estrictas. Este es
 el caso de organizaciones que manejen datos sensibles. En sintonía con esto, la empresa puede escalar su infraestructura en caso de
 necesitar alojar más datos, o si se necesitan más recursos en general. O, si lo necesita, puede personalizar su instancia de GitLab para
 adaptarse a sus flujos de trabajo y procesos específicos.\\
@@ -199,9 +205,9 @@ Es una función referente a la práctica de mantener el código en un estado que
 en producción \cite{fairbanks2023analyzing}. Lo que se busca es que la aplicación esté lista para llevarse a su entorno
 de despliegue.\\
 Existen al menos tres entornos de despliegue: de \textit{desarrollo}, de \textit{pruebas} y de \textit{producción}.
-Estos entornos se pueden gestionar mediante ramas en el desarrollo y con contenedores, que empaquetan las aplicaciones
+Estos entornos se pueden gestiónar mediante ramas en el desarrollo y con contenedores, que empaquetan las aplicaciones
 y sus dependencias \cite{fairbanks2023analyzing}. De forma más detallada, se utilizan tres ramas para
-gestionar los entornos.
+gestiónar los entornos.
 \begin{table}
         \centering
         \caption{Ramas y entornos de desarrollo}
@@ -226,7 +232,7 @@ que los miembros del equipo pueden trabajar en sus problemas individuales con co
 un buen producto.\\
 En GitLab, así como en otros sistemas de control de versiones distribuidos, es posible el desarrollo conjunto mediante ramas
 individuales. La integración se hace, justamente, cuando una de estas ramas se una con el flujo principal de desarrollo. Para
-nombrar las ramas y gestionarlas, se sigue el flujo de trabajo de GitLab flow, descrito con anterioridad.\\
+nombrar las ramas y gestiónarlas, se sigue el flujo de trabajo de GitLab flow, descrito con anterioridad.\\
 El flujo de trabajo, correctamente implementado, es de gran ayuda a la hora de manejar el trabajo conjunto de un equipo.
 También es necesario tomar a consideración que, en el contexto actual el trabajo remoto es más común, y el uso de herramientas
 como GitLab pueden suponer una gran ventaja a la hora de desarrollar proyectos mediante una modalidad remota \cite{choudhury2020gitlab}
@@ -237,13 +243,13 @@ objetivos espeçificos o fechas de entrega, y herramientas de \textit{roadmap} p
 a largo plazo \cite{choudhury2020gitlab}.
 \subsubsection{Gestión de tareas}
 Es necesario organizar el trabajo dentro de cualquier proyecto. GitLab ofrece un manera de crear \textlatin{issues}
-para gestionar tareas específicas. Estos \textit{issues} pueden asignarse a miembros específicos del equipo, pueden
+para gestiónar tareas específicas. Estos \textit{issues} pueden asignarse a miembros específicos del equipo, pueden
 etiquetarse y comentarse con información relevante.\\
 Igualmente, dentro de cda \textit{issue} se puede crear una lista de tareas para descomponer el trabajo en trozos más
 manejables para un miembro. Esto también facilita el seguimiento del proyecto, para evaluar el nivel de avance en el
 proyecto \cite{choudhury2020gitlab}.
 \subsubsection{Seguimiento de problemas}
-Los errores y problemas sempre aparecen en cualquier proyecto. Para que no lo consuman, es necesario gestionarlos de
+Los errores y problemas sempre aparecen en cualquier proyecto. Para que no lo consuman, es necesario gestiónarlos de
 buena manera antes de que se salgan de control. En GitLab, es posible dar un seguimiento a los problemas, reportar
 errores, y plantear preguntas \cite{choudhury2020gitlab}.\\
 Además, hay que tener en cuenta que los procesos de CD/CI permiten reducir el número de errores que surgan, ya que los
@@ -258,7 +264,7 @@ Entre estas, se encuentra GitLab Pages, que permite crear y publicar sitios web 
 de GitLab. Esto puede usarse para documentar proyectos o generar wikis que puedan ser usados en el futuro para comprender de
 mejor manera el proyecto. Las wikis también se pueden hacer de manera colaborativa, lo que aumenta su valor para el 
 equipo \cite{choudhury2020gitlab,safari2020analysis}.\\
-También se encuentra Markdown, que es capaz de generar documentación que puede versionarse y gestionarse de igual manera que el
+También se encuentra Markdown, que es capaz de generar documentación que puede versionarse y gestiónarse de igual manera que el
 código. Esto facilita la creación de documentos legibles y bien estructurados que, además, siempre estén actualizados
 con la versión actual del proyecto. Esta documentación también está disponible para todo el proyecto, lo que aumenta la
 legibilidad del código y facilita la colaboración.
@@ -283,6 +289,9 @@ Además, es posible personalizar a GitLab mediante la modificación del código 
 es de código abierto, por lo que se pueden agregar funcionalidades y personalizar las existentes según las necesidades \cite{safari2020structural}.
 \subsection{Historia de GitLab}
 %TODO: Historia de GitLab
+GitLab tuvo su origen en 2011, por los ucranianos Dmitriy Zaporozhets y Valery Sizov \cite{gitlab2022gitlab}, como un proyecto de código abierto. Fue
+producto de la necesidad de una herramienta de gestión de repositorios que facilitara la colaboración en el desarrollo de software \cite{safari2020analysis}.
+A lo largo de los años, fue incorporando más funcionalidades, ha evolucionado ampliamente desde sus orígenes.
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
 \begin{table}
         \centering
