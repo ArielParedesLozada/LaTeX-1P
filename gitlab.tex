@@ -157,7 +157,7 @@ Otra característica importante de GitLab es que maneja un flujo de trabajo part
 a los nombres de la ramas y a cómo se deben unir entre sí \cite{devineni1version}. Este modelo de ramificación, llamado
 GitLab Flow, está basado en GitHub flow, y describe 
 %TODO: PON EL GITLAB Flow (REF-GITLAB)
-\subsection{Funciones de GitLab}
+\subsection{RQ2: ¿Cuáles son las funciones de GitLab?}
 %Funciones de GitLab
 GitLab ofrece muchas funciones que facilitan el desarrollo de software y la colaboración entre equipos. Esto lo
 logra mediante varias funciones, enfocadas en la integración y entrega continua, la colaboración entre desarrolladores,
@@ -174,6 +174,18 @@ de forma independiente y luego unir sus cambios \cite{alvin2023devops}.
         \caption{Sistema distribuido}
         \label{fig:sys-dis}
 \end{figure}
+\subsubsection{Alojamiento de código}
+Al igual que plataformas como GitHub, GitLab puede alojar código en sus servidores. Sin embargo, en GitHub, el código se almacena
+en los servidores de la empresa propietaria. Con GitLab, se pueden usar los servidores de la empresa misma, lo que aumenta la
+privacidad. Además, al tener control total sobre los servidores, se pueden gestionar los proyectos con mucha más libertad y de manera
+más personalizada \cite{safari2020structural}.\\
+También se pueden gestionar aspectos de seguridad, ya que se pueden implementar políticas propias de seguridad más estrictas. Este es
+el caso de organizaciones que manejen datos sensibles. En sintonía con esto, la empresa puede escalar su infraestructura en caso de
+necesitar alojar más datos, o si se necesitan más recursos en general. O, si lo necesita, puede personalizar su instancia de GitLab para
+adaptarse a sus flujos de trabajo y procesos específicos.\\
+A pesar de todo esto, uno de los problemas obvios con el autoalojamiento es la necesidad de infraestructura, como servidores y máquinas
+en general. También está el precio del software, ya que, aunque es posible autoalojar el código con la versión gratutia (la Community Edition),
+es preferible usar la versión empresarial (Enterprise Edition) para empresas, ya que ofrece soporte premium y más características \cite{safari2020structural}.
 \subsubsection{Integración continua}
 Esto hace referencia a la práctica de integrar y probar el código constantemente con el fin de evitar el surgiemiento
 de bugs y errores en etapas tempranas. Esto se hace mediante un proceso automatizado de pruebas y construcción de artefactos
@@ -207,7 +219,16 @@ Se sigue un flujo de trabajo particular, en el cual cada rama se origina tras ha
 de su rama padre con su rama correspondiente \cite{alvin2023devops}. Se pueden usar tecnologías como Docker 
 o máquinas virtuales para implementar los contenedores y guardar el entorno de despliegue de las aplicaciones.
 \subsubsection{Colaboración asincrónica}
-%TODO
+GitLab permite la colaboración entre miembros de un equipo. Sin embargo, esta puede ser mucho más flexible de lo que sería
+una colaboración presencial común y corriente. La colaboración con GitLab puede ser asincrónica y remota, lo que significa
+que los miembros del equipo pueden trabajar en sus problemas individuales con comunicación directa mínima, y aun así generar
+un buen producto.\\
+En GitLab, así como en otros sistemas de control de versiones distribuidos, es posible el desarrollo conjunto mediante ramas
+individuales. La integración se hace, justamente, cuando una de estas ramas se una con el flujo principal de desarrollo. Para
+nombrar las ramas y gestionarlas, se sigue el flujo de trabajo de GitLab flow, descrito con anterioridad.\\
+El flujo de trabajo, correctamente implementado, es de gran ayuda a la hora de manejar el trabajo conjunto de un equipo.
+También es necesario tomar a consideración que, en el contexto actual el trabajo remoto es más común, y el uso de herramientas
+como GitLab pueden suponer una gran ventaja a la hora de desarrollar proyectos mediante una modalidad remota \cite{choudhury2020gitlab}
 \subsubsection{Planificación de proyectos}
 Es necesaria una buena planificación de los proyectos para su éxito. GitLab ofrece herramientas, como tableros Kanban
 para visualizar el flujo de trabajo y estado de tareas, la creación de hitos para agrupar \textit{issues} alrededor de
@@ -229,10 +250,36 @@ errores se encuentran más rápidamente. Sin embargo, no todo son ventajas, ya q
 velocidad a la que se hacen \textit{commit}, pero al mismo tiempo aumenta la cantidad de errores que se introducen en el
 código \cite{fairbanks2023analyzing}. Los equipos deben equilibrar este aspecto al usar GitLab.
 \subsubsection{Generación de documentación}
-
+La generación de documentación es parte fundamental en el desarrollo de software. Sin embargo, es también una parte muy
+tediosa, y suele ser evitada por desarrolladores. Aunque GitLab no ofrece un servicio automatizado para la generación de
+documentación, sí posee herramientas que lo facilitan.\\
+Entre estas, se encuentra GitLab Pages, que permite crear y publicar sitios web estátitcos directamente desde los repositorios
+de GitLab. Esto puede usarse para documentar proyectos o generar wikis que puedan ser usados en el futuro para comprender de
+mejor manera el proyecto. Las wikis también se pueden hacer de manera colaborativa, lo que aumenta su valor para el 
+equipo \cite{choudhury2020gitlab,safari2020analysis}.\\
+También se encuentra Markdown, que es capaz de generar documentación que puede versionarse y gestionarse de igual manera que el
+código. Esto facilita la creación de documentos legibles y bien estructurados que, además, siempre estén actualizados
+con la versión actual del proyecto. Esta documentación también está disponible para todo el proyecto, lo que aumenta la
+legibilidad del código y facilita la colaboración.
 \subsubsection{Control de acceso y seguridad}
-\subsubsection{API de GitLab}
+Una de las funciones de GitLab es controlar el acceso al proyecto. Esto se logra de múltiples maneras \cite{safari2020structural}.
+\begin{itemize}
+        \item \textbf{Control de Acceso Basado en Roles}: Se pueden definir roles y permisos específicos para los usuarios
+        \item \textbf{Autenticación de Dos Factores}: Hace referencia a que se necesitan dos factores para acceder al proyecto
+        \item \textbf{Auditorías}: Es posible rastrear las actividades de los usuarios dentro de la plataforma mediante herramientas de auditoría
+        \item \textbf{Protección de Ramas}: Se pueden proteger ramas específicas dentro del repositorio, lo que permite que sólo cambios revisados y aprobados lleguen a la rama principal
+        \item \textbf{Escaneo de Vulnerabilidades}: Se escanea el código en búsqueda de vulnerabilidades de seguridad, como contraseñaso claves dentro del código
+        \item \textbf{Configuración de políticas de Seguridad}: Se pueden aplicar políticas de privacidad a proyectos y grupos
+\end{itemize}
 \subsubsection{Personalización}
+GitLab permite la integración con muchas tecnologías y servicios externos. Es posible extender las capacidades de GitLab mediante herramientas externas,
+como lo son sistemas de gestión de proyectos externos, otras herramientas CI/CD, e incluso tecnologías como lo son los contenedores
+Justamente se puede integrar a Docker con GitLab, para mantener un entorno de desarrollo más compacto que tenga en cuenta las aplicaciones
+externas de las que depende el proyecto.\\
+También se puede personalizar mediante al autoalojamiento, o con la personalización de flujos de trabajo, como se explicó anteriormente. Igualmente,
+GitLab posee varias características nativas personalizables, y ofrece una API robusta para la integración con herramientas especializadas.
+Además, es posible personalizar a GitLab mediante la modificación del código fuente, al menos en su versión CE. Esto es posible ya que GitLab
+es de código abierto, por lo que se pueden agregar funcionalidades y personalizar las existentes según las necesidades \cite{safari2020structural}.
 \subsection{Historia de GitLab}
 %Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
