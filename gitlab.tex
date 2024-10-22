@@ -151,7 +151,7 @@ sino que también lo usan proyectos independientes que integren a programadores 
 geográficas \cite{safari2020structural}. Desde hace algún tiempo, varios equipos han comenzado a usar GitLab
 gracias a sus capacidades en la integración y entrega continua.\\
 Sin embargo, GitLab también tiene limitaciones en comparación a plataformas más especializadas, como lo es GitHub
-Por ejemplo, GitLab tienen menos capacidad a la hora de visualiazr el código, en contraste con GitHub, por ejemplo.
+Por ejemplo, GitLab tienen menos capacidad a la hora de visualizar el código, en contraste con GitHub, por ejemplo.
 Además, algunas de la comunidad de GitLab es mucho menor que la de otras plataformas, lo que puede dificultar su uso.
 Otra característica importante de GitLab es que maneja un flujo de trabajo particular, con estándares propios referentes
 a los nombres de la ramas y a cómo se deben unir entre sí \cite{devineni1version}. Este modelo de ramificación, llamado
@@ -165,7 +165,7 @@ el análisis de desempeño, entre otras, relacionadas a la filosofía de DevOps 
 Entre las funciones más importantes que ofrece GitLab se encuentran:
 \subsubsection{Control de versiones}
 GitLab utiliza a Git como sistema de control de versiones \cite{choudhury2020gitlab}. Esto significa que usa un
-manejo de versones basado en commits, ramas y todas los servicios que Git tiene. Esto también significa que GitLab
+manejo de versones basado en \textit{commits}, ramas y todas los servicios que Git tiene. Esto también significa que GitLab
 se basa en sistema de control de versiones distribuido, en el cual distintos miembros del equipo pueden trabajar
 de forma independiente y luego unir sus cambios \cite{alvin2023devops}.
 \begin{figure}[htbp]
@@ -177,7 +177,7 @@ de forma independiente y luego unir sus cambios \cite{alvin2023devops}.
 \subsubsection{Integración continua}
 Esto hace referencia a la práctica de integrar y probar el código constantemente con el fin de evitar el surgiemiento
 de bugs y errores en etapas tempranas. Esto se hace mediante un proceso automatizado de pruebas y construcción de artefactos
-cada vez que se realiza un commit a las ramas de desarrollo \cite{alvin2023devops,uddin2023comparative}. Esto se logra
+cada vez que se realiza un \textit{commit} a las ramas de desarrollo \cite{alvin2023devops,uddin2023comparative}. Esto se logra
 mediante un script especializado, que se ejecuta al momento de enviar cambios al repositorio remoto.\\
 En el caso de GitLab, este script se lo guarda en el archivo \texttt{.gitlab-ci.yml}. Para las pruebas, se usa el software
 de GitLab Runner, el cual se puede personalizar según las necesidades de los desarrolladores.
@@ -206,6 +206,33 @@ gestionar los entornos.
 Se sigue un flujo de trabajo particular, en el cual cada rama se origina tras hacer un \textit{merge request}
 de su rama padre con su rama correspondiente \cite{alvin2023devops}. Se pueden usar tecnologías como Docker 
 o máquinas virtuales para implementar los contenedores y guardar el entorno de despliegue de las aplicaciones.
+\subsubsection{Colaboración asincrónica}
+%TODO
+\subsubsection{Planificación de proyectos}
+Es necesaria una buena planificación de los proyectos para su éxito. GitLab ofrece herramientas, como tableros Kanban
+para visualizar el flujo de trabajo y estado de tareas, la creación de hitos para agrupar \textit{issues} alrededor de
+objetivos espeçificos o fechas de entrega, y herramientas de \textit{roadmap} prar visualizar el progreso de los proyectos
+a largo plazo \cite{choudhury2020gitlab}.
+\subsubsection{Gestión de tareas}
+Es necesario organizar el trabajo dentro de cualquier proyecto. GitLab ofrece un manera de crear \textlatin{issues}
+para gestionar tareas específicas. Estos \textit{issues} pueden asignarse a miembros específicos del equipo, pueden
+etiquetarse y comentarse con información relevante.\\
+Igualmente, dentro de cda \textit{issue} se puede crear una lista de tareas para descomponer el trabajo en trozos más
+manejables para un miembro. Esto también facilita el seguimiento del proyecto, para evaluar el nivel de avance en el
+proyecto \cite{choudhury2020gitlab}.
+\subsubsection{Seguimiento de problemas}
+Los errores y problemas sempre aparecen en cualquier proyecto. Para que no lo consuman, es necesario gestionarlos de
+buena manera antes de que se salgan de control. En GitLab, es posible dar un seguimiento a los problemas, reportar
+errores, y plantear preguntas \cite{choudhury2020gitlab}.\\
+Además, hay que tener en cuenta que los procesos de CD/CI permiten reducir el número de errores que surgan, ya que los
+errores se encuentran más rápidamente. Sin embargo, no todo son ventajas, ya que el mismo proceso de CD/CI aumenta la
+velocidad a la que se hacen \textit{commit}, pero al mismo tiempo aumenta la cantidad de errores que se introducen en el
+código \cite{fairbanks2023analyzing}. Los equipos deben equilibrar este aspecto al usar GitLab.
+\subsubsection{Generación de documentación}
+
+\subsubsection{Control de acceso y seguridad}
+\subsubsection{API de GitLab}
+\subsubsection{Personalización}
 \subsection{Historia de GitLab}
 %Historia de GitLab
 %Asegurarse de mencionar a BitBucket y otros sistemas similares
@@ -223,6 +250,7 @@ o máquinas virtuales para implementar los contenedores y guardar el entorno de 
 \end{table}
 \subsection{Ventajas y desventajas}
 %Ventajas y deventajas de GitLab
+%%Una de las desventajas es que aumenta el número de problemas
 %Tabla de comparación con otros sistemas similares
 \section{Discusión}
 %Contextualizar la investigación
