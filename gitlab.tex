@@ -1,5 +1,5 @@
 \documentclass[runningheads]{llncs}
-\usepackage[spanish]{babel}
+\usepackage[spanish, english]{babel}
 \usepackage{graphicx}
 \usepackage{tabularx, booktabs}
 \renewcommand{\arraystretch}{1.5}
@@ -16,18 +16,31 @@
 \email{secretariageneral@uta.edu.ec}}
 
 \maketitle
+\selectlanguage{english}
+\begin{abstract}
+        Version control, testing, and monitoring are fundamental parts of software development.
+        Nowadays, there are many tools to automate these processes, that are included under the
+        term DevOps. GitLab is one of these DevOps tools, and it simplifies the software development
+        lifecycle and facilitates collaboration inside a team. It's necessary to understand the
+        characteristics, functions, pros, and cons of this tool to evaluate its usage in
+        projects. Hence, it is important to understand GitLab's history, as well as its role among
+        other DevOps tools. With this intention in mind, an investigation has been made to determine
+        GitLab's most relevant characteristics and summarize them in an inform.
+\end{abstract}
+\keywords{GitLab \and DevOps \and functions \and repository \and version control}
+\selectlanguage{spanish}
 \begin{abstract}
         %Abstract de 120 palabras
         El control de versiones, el testeo y monitoreo son una partes fundamentales dentro del desarrollo del software.
         En la actualidad, existen múltiples herramientas que automatizan este proceso, que se engloban bajo el nombre de DevOps.
         Una de estas herramientas de DevOps es GitLab, que facilita el ciclo de desarrollo y facilita la colaboración.
         Es necesario conocer las características, funciones, ventajas y desventajas de esta herramienta con el fin de 
-        sopesar su uso y determinar la viabilidad de su uso en proyectos. Por este mismo motivo, es enecesario conocer la
+        sopesar su uso y determinar la viabilidad de su uso en proyectos. Por este mismo motivo, es necesario conocer la
         historia de GitLab, y qué papel juega dentro del panorama de las demás herramientas de DevOps.
         Con este fin, se ha hecho una investigación para determinar las características más importantes de GitLab y
         sintetizarlo en un informe. 
 \end{abstract}
-\keywords{GitLab \and DevOps \and funciones}
+\keywords{GitLab \and DevOps \and funciones \and repositorio \and control de versiones}
 \section{Introducción}
 %Qué es el sistema de control de versiones y así
 %Panorama para usar GitLab
@@ -318,11 +331,7 @@ enfocado en mejorar la experiencia de desarrollo en la nube. Tras 2020, se agreg
 dentro de los proyectos \cite{uddin2023comparative}.\\
 Como se puede observar, GitLab ha tenido un gran crecimiento en los últimos años, aumentando sus funciones y capacidades de gestión de código. Sin embargo,
 existen otras herramientas de alojamiento de código y manejo de versiones que compiten contra GitLab. Entre estas se encuentran: GitHub, BitBucket, AWS CodeCommit,
-Azure DevOps y Source Forge. También se podría incluir a Google Code, de no ser por su cierre en 2016 \cite{safari2020analysis}.\\
-Todas estas herramientas tienen su propia historia, características y ventajas, así como desventajas. Es necesario conocer cuáles son estas características para
-evaluar correctamente a GitLab en sus funciones, y comprender su posición dentro del entorno del desarrollo de software. Sin embargo, y a pesar de las distintas
-plataformas de alojamiento de repositorios, la plataforma más popular, por un muy amplio márgen es GitHub \cite{uddin2023comparative}.
-%Asegurarse de mencionar a BitBucket y otros sistemas similares
+Azure DevOps, Source Forge y Jenkins, a pesar de que esta última se centra más en el aspecto de CI/CD \cite{ferdian2021continuous}. También se podría incluir a Google Code, de no ser por su cierre en 2016 \cite{safari2020analysis}.\\
 \begin{table}
         \centering
         \caption{Comparación de GitLab}
@@ -334,12 +343,17 @@ plataformas de alojamiento de repositorios, la plataforma más popular, por un m
             GitHub & Moderada, más fácil si se sabe usar Git & Licencia propietaria & Microsoft & 2008 & Ruby (framework Ruby on Rails) & La inmensa mayoría de proyectos de software\\
             BitBucket & Moderada & Licencia propietaria & Atlassian & 2008 & Python & Atlassian Jira, Puppet, OpenShift\\
             AWS CodeCommit & Moderada & Servicio de pago basado en uso & Amazon Web Services (AWS) & 2015 & Java, Python, entre otros & ECS, proyectos empresariales y de código abierto\\
-            Azure DevOps & Moderada a alta & Licencia propietaria & Microsoft & 2018 & TypeScript & Microsoft Teams, Visual Studio Code, .NET Core\\
+            Azure DevOps & Moderada a alta & Licencia propietaria & Microsoft & 2018 & C\#, Typescript, entre otros & Microsoft Teams, Visual Studio Code, .NET Core\\
             Source Froge & Moderada a alta & Licencias de código abierto (GNU, GPL, MIT, etc.) & Slashdot Media Inc. & 1999 & PHP, Perl & FileZila, Audacity, Apache HTTP Server\\
+            Jenkins & Moderada, amplio soporte comunitario & MIT License & Proyecto de código abierto & 2011 & Java & Netflix, eBay, Yahoo, etc.\\
             \hline
         \end{tabularx}
         \label{table:3}
 \end{table}
+Todas estas herramientas tienen su propia historia, características y ventajas, así como desventajas. Es necesario conocer cuáles son estas características para
+evaluar correctamente a GitLab en sus funciones, y comprender su posición dentro del entorno del desarrollo de software. Sin embargo, y a pesar de las distintas
+plataformas de alojamiento de repositorios, la plataforma más popular, por un muy amplio márgen es GitHub \cite{uddin2023comparative}.
+%Asegurarse de mencionar a BitBucket y otros sistemas similares
 \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.5\textwidth]{Comp-rep.png}
@@ -414,6 +428,6 @@ del software.\\
 A pesar de todo esto, es necesaria más investigación acerca de las funciones de GitLab. En particular el uso y configuración del archivo \texttt{.gitlab-ci.yml}. También se
 deben explorar más herramientas para el desarrollo de software, con el fin de tener una perspectiva más amplia respecto a los servicios de repositorio remotos que existen en
 el mercado.
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{ref}
 \end{document}
