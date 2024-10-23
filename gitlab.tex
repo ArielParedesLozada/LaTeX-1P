@@ -87,7 +87,7 @@ Se buscan responder cuatro interrogantes con la investigación:
         \item \textbf{RQ3}: ¿Cuál es la historia de GitLab?\\
         \textit{RQ3-Objetivo}: Compilar el desarrollo de GitLab a lo largo del tiempo y contrastarlo con otras herramientas similares
         \item \textbf{RQ4}: ¿Cuáles son las ventajas y desventajas de GitLab?\\
-        \textit{RQ4-Objetivo}: Examinar los pros y contras del desarrollo con GitLab frente a otras herramientas DevOps y enfoques de desarrollo
+        \textit{RQ4-Objetivo}: Examinar los pros y contras del desarrollo con GitLab para determinar sus casos de uso
 \end{itemize}
 \subsection{Exploración de documentos}
 %Se hizo una búsqueda en tal y tal sitios web.
@@ -208,7 +208,7 @@ el caso de organizaciones que manejen datos sensibles. En sintonía con esto, la
 necesitar alojar más datos, o si se necesitan más recursos en general. O, si lo necesita, puede personalizar su instancia de GitLab para
 adaptarse a sus flujos de trabajo y procesos específicos.\\
 A pesar de todo esto, uno de los problemas obvios con el autoalojamiento es la necesidad de infraestructura, como servidores y máquinas
-en general. También está el precio del software, ya que, aunque es posible autoalojar el código con la versión gratutia (la Community Edition),
+en general. También está el precio del software, ya que, aunque es posible autoalojar el código con la versión gratuita (la Community Edition),
 es preferible usar la versión empresarial (Enterprise Edition) para empresas, ya que ofrece soporte premium y más características \cite{safari2020structural}.
 \subsubsection{Integración continua}
 Esto hace referencia a la práctica de integrar y probar el código constantemente con el fin de evitar el surgiemiento
@@ -256,7 +256,7 @@ como GitLab pueden suponer una gran ventaja a la hora de desarrollar proyectos m
 \subsubsection{Planificación de proyectos}
 Es necesaria una buena planificación de los proyectos para su éxito. GitLab ofrece herramientas, como tableros Kanban
 para visualizar el flujo de trabajo y estado de tareas, la creación de hitos para agrupar \textit{issues} alrededor de
-objetivos espeçificos o fechas de entrega, y herramientas de \textit{roadmap} prar visualizar el progreso de los proyectos
+objetivos específicos o fechas de entrega, y herramientas de \textit{roadmap} prar visualizar el progreso de los proyectos
 a largo plazo \cite{choudhury2020gitlab}.
 \subsubsection{Gestión de tareas}
 Es necesario organizar el trabajo dentro de cualquier proyecto. GitLab ofrece un manera de crear \textlatin{issues}
@@ -346,15 +346,59 @@ plataformas de alojamiento de repositorios, la plataforma más popular, por un m
         \caption{Comparación entre plataformas}
         \label{fig:comp-rep}
 \end{figure}
-\subsection{Ventajas y desventajas}
+\subsection{RQ4: ¿Cuáles con las ventajas y desventajas de GitLab?}
 %Ventajas y deventajas de GitLab
 %%Una de las desventajas es que aumenta el número de problemas
 %Tabla de comparación con otros sistemas similares
-
+GitLab posee varias virtudes, así como defectos, al igual que cualquier otra herramienta de software. De igual manera, flaquea en aspectos
+en los que otros sistemas, como GitHub o BitBucket.
+\subsubsection{Ventajas}
+GitLab posee varias ventajas frente a otros sistemas de gestión de repositorios. Una de las más notables es su integración con CI y CD. Como
+toda herramienta DevOps, GitLab es capaz de automatizar pruebas de integración y permite mantener un entorno de despliegue constante, con el
+software losto en todo momento para salir a producción. Esto sirve para automatizar el flujo de trabajo y mejorar la eficiencia en la entrega
+del software \cite{uddin2023comparative}.\\
+También tiene la ventaja de ser de código abierto, lo que significa que permite a los usuarios personalizar las características de su versión
+que usen. También es posible contribuir a la plataforma, en caso de que se quiera ayudar en la mejora de sus funciones. Esto se puede hacer con
+la versión CE (Community Edition). Esta es una opción recomendada para aproyectos que también utulicen código abierto, o para proyectos
+que vean la necesidad de una fuerte personalización en algún aspecto.\\
+En sintonía con esto, GitLab ofrece la capacidad de autoalojar el código en los servidores propios de la empresa, añadiendo una capa extra en la
+personalización. Esta opción también se usa en caso de que se tenga que tratar con datos sensibles, como información personal, o si se requiere
+seguir lineaminetos más estrictos referentes al trato que se le dan a los datos. Así mismo, el autoalojamiento puede usarse para mejorar la seguridad
+del sistema, al implementar políticas de privacidad y seguridad más estrictas \cite{safari2020analysis}.\\
+Otro de los beneficios que ofrece GitLab frente a otros sistemas de gestión de repositorios, es la amplia variedad de herramientas para manejar
+proyectos y el trabajo en equipo. GitLab puede incluir tableros Kanban, seguimiento de errores, listas de tareas, entre muchas otras funciones
+que permiten colaborar de forma más sencilla, no sólo entre desarrolladores, sino que también con miembros administrativos y de gerencia que
+sean parte del equipo \cite{choudhury2020gitlab}. GitLab es una herramienta muy útil para trabajar con proyectos, que no se limita al campo del
+desarrollo de software.\\
+Como estas distintas partes del equipo pueden no estar familiarizadas con conceptos de software, GitLab ofrece una interfaz intuitiva y fácil
+de entender para primerizos. Los nuevos usuarios inician con una interfaz amigable y que guía los pasos en la gestión del proyecto. Además, los
+mismos miembros del equipo pueden ayudarse entre sí mediante wikis internas, comentarios y discusiones en las tareas. Esto facilita en gran
+aun más la adopción de GitLab por parte de nuevos usuarios \cite{uddin2023comparative}.\\
+Con esto, es posible ver que GitLab es una herramienta ideal para el trabajo en equipos que requiera de un integración y entrega continua. Estos
+equipos pueden componerse de varias partes, no únicamente de desarrolladores. Justamente GitLab ofrece varias funciones para gestionar equipos,
+como listas de tareas, con lo que es posible manejar equipos compuestos de desarrolladores, así como de personal de gerencia \cite{choudhury2020gitlab}.
+GitLab es una herramienta que ofrece muchos servicios a favor del desarrollo, pero igualmente tiene desvenntajas que se deben entender.
+\subsubsection{Desventajas}
+GitLab, a pesar de ser intuitivo al inicio, tiene características más complejas al momento que se quiere acceder a las funcionalidades más complejas.
+Gestionar los scripts de integración y entrega, así como las herramientas para el entorno específico en que se desarrolla la aplicación. Modificar el
+archivo \texttt{.gitlab-ci.yml} y GitLab Runner para que automatice las pruebas, es una tarea complicada \cite{alvin2023devops}.\\
+También es complicado manejar las integraciones con herramientas externas, ya que GitLab tiene menos integración que otras herramientas, como lo es
+GitHub. En general, la comunidad de GitLab es mucho menor que la de GitHub \cite{devineni1version}, lo que dificulta muchos aspectos a la hora de solucionar problemas con la
+plataforma, el aprendizaje y la integración con herramientas externas.\\
+Otro aspecto a tener en cuenta son las limitaciones que puede tener la versión gratuita frente a la premium. La edición premium (EE) tiene más servicios,
+pero tam bién limita el nivel de personalización que se le puede dar, al ser de licencia propietaria y no libre \cite{uddin2023comparative}. Igualmente, se
+debe tener en cuenta el precio de la mmisma versión, que llega a ser un impedimento importante a la hora de usarla en una empresa que tenga recursos limitados
+o que esté corta de presupuesto.\\
+Un aspecto a tener en cuenta es que la integración y entrega continua es un arma de doble filo, ya que, aunque aumenta la velocidad a la que se hacen
+\textit{commits} en el código, también aumenta significativamente el número de errores que surgen dentro del proyecto. Se ha encontrado un aumento de un
+321.21\% en la cantidad de problemas encontrados en el repositorio \cite{fairbanks2023analyzing}. Esto es un problema importante que hay que tener en cuenta
+al momento de usar GitLab, o cualquier herramienta de CI/CD en un proyecto. Se busca equilibrar la velocidad de entrega con la calidad del código.\\
+Finalmente, el rendimiento de GitLab es menor para las instancias autoalojadas, y empeora más en repositorios grandes o con equipos numerosos. Esto depende
+de varios factores, pero también es un punto a tener en cuenta a la hora de escoger a GitLab como una herramienta de gestión de repositorios.
 \section{Discusión y Conclusiones}
 %Resumen de GitLab, qué hace, para qué se lo usa y qué beneficios tiene
 %Contextualizar la investigación
-%Problemas con la invetigación. Recomendaciones 
+%Problemas con la invetigación. Recomendaciones
 \bibliographystyle{plain}
 \bibliography{ref}
 \end{document}
