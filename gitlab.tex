@@ -159,11 +159,11 @@ sino que también lo usan proyectos independientes que integren a programadores 
 geográficas \cite{safari2020structural}. Desde hace algún tiempo, varios equipos han comenzado a usar GitLab
 gracias a sus capacidades en la integración y entrega continua.\\
 Sin embargo, GitLab también tiene limitaciones en comparación a plataformas más especializadas, como lo es GitHub
-Por ejemplo, GitLab tienen menos capacidad a la hora de visualizar el código, en contraste con GitHub, por ejemplo.
+Por ejemplo, GitLab tienen menos capacidad a la hora de visualizar el código, en contraste con GitHub.
 Además, algunas de la comunidad de GitLab es mucho menor que la de otras plataformas, lo que puede dificultar su uso.
 Otra característica importante de GitLab es que maneja un flujo de trabajo particular, con estándares propios referentes
 a los nombres de la ramas y a cómo se deben unir entre sí \cite{devineni1version}. Este modelo de ramificación, llamado
-GitLab Flow, está basado en GitHub flow, el cual a su vez se basa en GitFlow. Este es un flujo de trabajo que especifica
+\textit{GitLab Flow}, está basado en GitFlow. Este es un flujo de trabajo que especifica
 la manera en que se debe colaborar y gestionar el código en un repositorio. El flujo de trabajo define roles, responsabilidades,
 estructura y modelo de colaboración entre los desarrolladores \cite{uddin2023comparative}. Sin embargo, uno de los espectos
 más importantes que define el flujo de trabajo es la gestión de ramas: cómo nombrarlas, qué hace cada una, cómo unirlas y
@@ -172,13 +172,15 @@ Uno de los flujos de trabajo más populares es \textit{GitFlow}, el cual existen
 es la rama que se manda a producción, mientras que los desarrollo se hacen en \textbf{develop}. Para incluir nuevas funcionalidades
 se crea una nueva rama \textbf{feature}, si ocurre un problema se soluciona en una rama \textbf{hotfix}, y las versiones
 planificadas para la entrega se ponen en \textbf{release}. Este flujo de trabajo, a pesar de su complejidad y rigidez,
-provee de un marco de trabajo para el desarrollo paralelo de funciones y el versionamiento del producto.\\
-Uno de los modelosbasados en GitFlow es \textit{GitHub Flow}, un flujo de desarrollo ideado para proyectos que usan GitHub.
-Se enfoca en una mayor simplicidad, ya que existe una única rama principal, y se crean ramas secundarias para funcionalidades
-o arreglos que se quieran hacer. Se apoya mucho en los \textbf{pull requests}, los cuales se usan para revisar cambios en el
-código, discutirlos, controlarlos, y manejar los posibles conflictos de fusión que aparecen al integrarlos con la rama principal.
-Una de las mayores diferencs que posee con GitFlow es que el desarrollo es más lineal, flexible y sencillo de usar. A esto se
-suma que permite una integración con la rama principal más rápida y directa, manteniendo un entorno de entrega continua \cite{devineni1version}.
+provee de un marco de trabajo para el desarrollo paralelo de funciones y el versionamiento del producto \cite{devineni1version}.\\
+Los proyectos desarrollados en GitLab utilizan un flujo de trabajo particular: \textit{GitLab Flow}, el cual está basado en GitFlow.
+Se diferencia con este en que no tiene una rama de \textbf{release}, y que las entregas se realizan directamente desde la rama 
+principal. Las ramas de \textbf{feature} y \textbf{hotfix} también pueden unirse en la rama principal, sin pasar por una intermedia.
+Uno de los puntos claves de GitLab Flow es el uso de \textit{merge requests}, los cuales ocurren cada vez que se quiere unir una
+rama con la rama principal. Estos permiten analizar, discutir y controlar los cambios que ocurran en el repositorio, así como manejar
+los conflictos que ocurran al fusionar las ramas. Esto permite tener un flujo de trabajo mucho más flexible y sencillo de usar por
+el equipo. También permite mantener un entorno de integración y entrega continuas, en el cual se ven rápidamente los cambios
+hechos en el código \cite{devineni1version}.
 \subsection{RQ2: ¿Cuáles son las funciones de GitLab?}
 %Funciones de GitLab
 GitLab ofrece muchas funciones que facilitan el desarrollo de software y la colaboración entre equipos. Esto lo
